@@ -57,3 +57,44 @@ input:not([type=color]),form>select{background:#c8def4;border-color:#7ea3c880}
 .color-choice{border-color:#b6d3f0}
 .empty-books{background:#b2d1f0;border-color:#729bc066;color:#557c9f}
 @media(min-width:650px){body{background:#80addd}.shell{border-color:#729bc066}}
+
+/* Month overview uses the available viewport rather than fixed-height rows. */
+.month-screen{
+  height:100dvh;min-height:0;
+  padding-bottom:calc(72px + env(safe-area-inset-bottom));
+  display:flex;flex-direction:column;overflow:hidden;
+}
+.month-screen>header{height:42px;min-height:42px}
+.month-screen .brand{font-size:24px}
+.month-screen .brand-mark{width:25px;height:28px}
+.month-screen .header-note{font-size:8px}
+.month-screen #main{display:flex;flex-direction:column;flex:1;min-height:0;padding-bottom:8px}
+.month-screen .page-heading{padding-top:3px;min-height:36px}
+.month-screen .page-heading .eyebrow{display:none}
+.month-screen .page-heading h1{font-size:27px;line-height:1.1}
+.month-screen .page-heading .icon-button{height:34px;min-width:34px}
+.month-screen .period-toggle{margin:7px 0 2px;padding:3px;flex-shrink:0}
+.month-screen .period-toggle button{min-height:28px}
+.month-screen .period-nav{min-height:32px;flex-shrink:0}
+.month-screen .period-title{min-height:32px}
+.month-screen .period-nav .icon-button{height:32px}
+.month-screen .stats-strip{margin:5px 0 9px;padding:0 0 8px;flex-shrink:0;align-items:center}
+.month-screen .stats-strip>div{display:flex;align-items:baseline;gap:8px}
+.month-screen .stats-strip>div+div{padding-left:12px}
+.month-screen .stats-strip .small-label{font-size:8px;letter-spacing:.5px}
+.month-screen .stats-strip strong{font-family:inherit;font-size:15px;font-weight:600;margin-top:0;white-space:nowrap}
+.month-screen .graph-section{display:flex;flex-direction:column;flex:1;min-height:0;padding:9px 10px 7px}
+.month-screen .graph-heading{margin:0 0 3px;flex-shrink:0}
+.month-screen .legend{margin:0 0 6px;gap:4px 10px;font-size:10px;max-height:32px;overflow-y:auto;flex-shrink:0}
+.month-screen .chart{flex:1;min-height:0;display:grid;grid-template-rows:18px repeat(var(--days),minmax(0,1fr))}
+.month-screen .axis,.month-screen .graph-row{grid-template-columns:25px minmax(0,1fr) 48px;column-gap:6px}
+.month-screen .axis{height:18px}
+.month-screen .graph-row{height:100%;min-height:0;border-radius:2px}
+.month-screen .date-label{display:block;line-height:1}
+.month-screen .date-label b{font-size:11px;font-weight:500}
+.month-screen .date-label small{display:none}
+.month-screen .bar-track{height:100%;min-height:0}
+.month-screen .bar{height:70%;max-height:14px;min-height:3px;border-radius:2px}
+.month-screen .day-total{font-size:10px;line-height:1;white-space:nowrap}
+.month-screen .subject-breakdown,.month-screen #main>.outline,.month-screen .empty-caption{display:none}
+@media(max-height:700px){.month-screen>header{display:none}.month-screen .page-heading h1{font-size:24px}.month-screen .page-heading{padding-top:7px}.month-screen .graph-heading{display:none}}
