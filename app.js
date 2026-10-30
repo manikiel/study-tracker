@@ -41,5 +41,5 @@ document.addEventListener('visibilitychange',tick);
 sheet.addEventListener('click',e=>{if(e.target===sheet){const r=sheet.getBoundingClientRect();if(e.clientY<r.top||e.clientY>r.bottom||e.clientX<r.left||e.clientX>r.right)close();}});
 view=['timer','progress','subjects'].includes(location.hash.slice(1))?location.hash.slice(1):'timer';render();
 if(!storageReady){app.innerHTML='<main class="storage-error"><h1>Your data needs attention.</h1><p>Study could not read this device’s saved data. Nothing has been overwritten. Check that browser storage is available, then reload.</p><button class="primary" id="reload">Try again</button></main>';$('#reload').onclick=()=>location.reload();}
-if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>notify('Offline setup failed. Reopen while connected to try again.'));
+if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=4',{updateViaCache:'none'}).catch(()=>notify('Offline setup failed. Reopen while connected to try again.'));
 if(navigator.storage?.persist)navigator.storage.persist().catch(()=>{});
