@@ -52,7 +52,7 @@ Exports contain personal study data and stay on your device. Clearing site data,
 
 ## Offline and updates
 
-The service worker precaches the complete app shell and icons. Existing cached files are available offline after a successful first online installation. The cache is versioned in `sw.js`; increment `CACHE` when publishing changes. An installed update waits for existing app windows to close, avoiding a mixed-version session. Then reopen the app while connected. Data uses a separate localStorage key and is not removed when caches update.
+The service worker precaches the complete app shell and icons. Existing cached files are available offline after a successful first online installation. The cache is versioned in `sw.js`; increment `CACHE` when publishing changes. After its full app shell is cached, an update activates and refreshes open app windows. Saved sessions and running timers remain in localStorage; unsaved form edits may need to be re-entered. Data uses a separate localStorage key and is not removed when caches update.
 
 ## Validation
 
