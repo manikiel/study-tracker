@@ -5,48 +5,55 @@
 /* The reference supplies only the main background colour. */
 .graph-heading{justify-content:flex-end}
 
-/* Calm neutral surfaces let the reference blue frame the interface. */
-:root{--ink:#243e55;--muted:#405f79;--blue:#315978;--line:#b5c9d9;--surface:#edf2f4}
-.header-note,.brand-dot,.blue-dot{color:#3c6181}
-.brand-mark{background:#e6eef3;border-color:#668baa}
-.select-wrap,select,.secondary,.icon-button{background:#eef3f5;border-color:#b0c5d6}
-.timer-orbit{border-color:#5e8bb180;background:#dce9f366}
-.timer-orbit:after{border-color:#507fa24d}
-.timer-inner{background:#f1f3ee;box-shadow:inset 0 0 0 1px #ffffff70}
-.timer-unit,.timer-flourish{color:#557080}
-.primary{background:#315978;box-shadow:0 3px 0 #23476230}
-.primary:hover{background:#294d6a}
-.text-button{color:#2d5273}
-.discard{color:#704550}
-.today-strip{background:#e5eef5;border:1px solid #b6ccdd;border-radius:14px;padding:14px;margin-top:5px}
-.today-symbol{background:#d0e0ec;color:#426783}
-nav{background:#e6eef6fa;border-top-color:#b1c6d8}
-nav button{color:#4d6b83}
-nav button[aria-current]{background:#c3d8eb;color:#254f72}
-.period-toggle{background:#d2e2ef;border:1px solid #a4bfd5}
-.period-toggle button{color:#44637d}
-.period-toggle button[aria-pressed=true]{background:#f1f4f5}
-.period-nav .icon-button{color:#2d5273}
-.stats-strip{background:#deebf5;border:1px solid #afc9df;border-radius:14px;padding:17px 18px;margin-bottom:23px}
-.stats-strip>div+div{padding-left:18px}
-.graph-section{background:#eaf1f6;border:1px solid #b5cbdd;border-radius:16px;padding:16px 12px;margin:0 -12px}
-.graph-heading{margin-bottom:17px}
-.axis,.date-label,.day-total{color:#46647a}
-.bar-track{border-left-color:#9bb5c9;background-image:linear-gradient(to right,transparent calc(100% - 1px),#b7ccdc99 0)}
-.empty .date-label,.empty .day-total{color:#738b9f}
-.subject-breakdown{border-top-color:#719ac280}
-.subject-list:not(:has(.empty-subjects)){background:#e7eff5;border:1px solid #b2cadd;border-radius:16px;padding:0 14px}
-.subject-row:last-child{border-bottom:0}
-.subject-row>svg{color:#57758d}
-.outline{background:#deebf4;border-color:#9bb9d1;color:#2d5273}
-.backup-section{border-top-color:#719ac280}
-.backup-section>p:not(.eyebrow),details,.privacy-note{color:#405f79}
-.backup-buttons .secondary{background:#eaf1f6}
-.add-first{background:#deebf4;border-color:#5f88aa}
 
-/* Original soft blue on the contrasting surfaces. */
-:root{--surface:#dce9ef}
-.select-wrap,select,.secondary,.icon-button,.timer-inner,.today-strip,.period-toggle button[aria-pressed=true],.stats-strip,.graph-section,.subject-list:not(:has(.empty-subjects)),.outline,.backup-buttons .secondary,.add-first,dialog,input:not([type=color]),form>select{background:#dce9ef}
-nav{background:#dce9effa}
-.timer-inner{box-shadow:inset 0 0 0 1px #c4d8e4}
-.color-choice{border-color:#dce9ef}
+/* A single blue family: saturated canvas, quiet tonal surfaces, slate ink. */
+:root{
+  --ink:#263f5c;
+  --muted:#365575;
+  --blue:#3d6088;
+  --line:#7199c466;
+  --surface:#b3d1f2;
+}
+.header-note,.brand-dot,.blue-dot{color:#365a7e}
+.brand-mark{background:#acd0f3;border-color:#638eb8}
+.select-wrap,select,.secondary,.icon-button{background:#b6d4f3;border-color:#6e99c266}
+.timer-orbit{border-color:#5d8cba66;background:transparent}
+.timer-orbit:after{border-color:#5d8cba40}
+.timer-inner{background:#bed8f3;box-shadow:inset 0 0 0 1px #d1e4f566}
+.timer-unit,.timer-flourish{color:#486789}
+.orbit-top{outline-color:#6f99c1}
+.primary{background:#3d6088;color:#edf4fc;box-shadow:none}
+.primary:hover{background:#35587e}
+.text-button{color:#2e5177}
+.discard{color:#6b4356}
+.today-strip{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:17px 0 0;margin-top:5px}
+.today-symbol{background:#a7c9ee;color:#3f6288}
+nav{background:#a7c9edf5;border-top-color:#7199c455;backdrop-filter:blur(12px)}
+nav button{color:#3f6082}
+nav button[aria-current]{background:#bed7f1;color:#294d75}
+.period-toggle{background:#9bc2ec;border:0}
+.period-toggle button{color:#365777}
+.period-toggle button[aria-pressed=true]{background:#bed8f3;box-shadow:none}
+.period-nav .icon-button{color:#2e5177}
+.stats-strip{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 22px;margin:19px 0 24px}
+.stats-strip>div+div{padding-left:24px}
+.graph-section{background:#a9ccf0;border:1px solid #739cc333;border-radius:15px;padding:15px 12px;margin:0 -12px}
+.graph-heading{margin-bottom:17px}
+.axis,.date-label,.day-total{color:#365777}
+.bar-track{border-left-color:#6a93bc66;background-image:linear-gradient(to right,transparent calc(100% - 1px),#709ac340 0)}
+.empty .date-label,.empty .day-total{color:#536f8c}
+.is-today .date-label{color:#254969}
+.subject-breakdown,.backup-section{border-top-color:var(--line)}
+.subject-list:not(:has(.empty-subjects)){background:transparent;border:0;border-radius:0;padding:0}
+.subject-row>svg{color:#456b90}
+.subject-row{border-color:var(--line)}
+.outline{background:#a8cbef;border-color:#6b95bf66;color:#2e5177}
+.backup-section>p:not(.eyebrow),details,.privacy-note{color:var(--muted)}
+.backup-buttons .secondary{background:#b3d1f1}
+.add-first{background:#a8cbef;border-color:#618bb566}
+dialog{background:#b6d3f0;border-color:#87acd0}
+.sheet-top .icon-button,.custom-color{background:#a4c6e9}
+input:not([type=color]),form>select{background:#c8def4;border-color:#7ea3c880}
+.color-choice{border-color:#b6d3f0}
+.empty-books{background:#b2d1f0;border-color:#729bc066;color:#557c9f}
+@media(min-width:650px){body{background:#80addd}.shell{border-color:#729bc066}}
