@@ -43,3 +43,10 @@ nav button[aria-current]{background:#c3d8eb;color:#254f72}
 .backup-section>p:not(.eyebrow),details,.privacy-note{color:#405f79}
 .backup-buttons .secondary{background:#eaf1f6}
 .add-first{background:#deebf4;border-color:#5f88aa}
+
+/* Original soft blue on the contrasting surfaces. */
+:root{--surface:#dce9ef}
+.select-wrap,select,.secondary,.icon-button,.timer-inner,.today-strip,.period-toggle button[aria-pressed=true],.stats-strip,.graph-section,.subject-list:not(:has(.empty-subjects)),.outline,.backup-buttons .secondary,.add-first,dialog,input:not([type=color]),form>select{background:#dce9ef}
+nav{background:#dce9effa}
+.timer-inner{box-shadow:inset 0 0 0 1px #c4d8e4}
+.color-choice{border-color:#dce9ef}
