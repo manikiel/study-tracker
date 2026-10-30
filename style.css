@@ -4,3 +4,42 @@
 
 /* The reference supplies only the main background colour. */
 .graph-heading{justify-content:flex-end}
+
+/* Calm neutral surfaces let the reference blue frame the interface. */
+:root{--ink:#243e55;--muted:#405f79;--blue:#315978;--line:#b5c9d9;--surface:#edf2f4}
+.header-note,.brand-dot,.blue-dot{color:#3c6181}
+.brand-mark{background:#e6eef3;border-color:#668baa}
+.select-wrap,select,.secondary,.icon-button{background:#eef3f5;border-color:#b0c5d6}
+.timer-orbit{border-color:#5e8bb180;background:#dce9f366}
+.timer-orbit:after{border-color:#507fa24d}
+.timer-inner{background:#f1f3ee;box-shadow:inset 0 0 0 1px #ffffff70}
+.timer-unit,.timer-flourish{color:#557080}
+.primary{background:#315978;box-shadow:0 3px 0 #23476230}
+.primary:hover{background:#294d6a}
+.text-button{color:#2d5273}
+.discard{color:#704550}
+.today-strip{background:#e5eef5;border:1px solid #b6ccdd;border-radius:14px;padding:14px;margin-top:5px}
+.today-symbol{background:#d0e0ec;color:#426783}
+nav{background:#e6eef6fa;border-top-color:#b1c6d8}
+nav button{color:#4d6b83}
+nav button[aria-current]{background:#c3d8eb;color:#254f72}
+.period-toggle{background:#d2e2ef;border:1px solid #a4bfd5}
+.period-toggle button{color:#44637d}
+.period-toggle button[aria-pressed=true]{background:#f1f4f5}
+.period-nav .icon-button{color:#2d5273}
+.stats-strip{background:#deebf5;border:1px solid #afc9df;border-radius:14px;padding:17px 18px;margin-bottom:23px}
+.stats-strip>div+div{padding-left:18px}
+.graph-section{background:#eaf1f6;border:1px solid #b5cbdd;border-radius:16px;padding:16px 12px;margin:0 -12px}
+.graph-heading{margin-bottom:17px}
+.axis,.date-label,.day-total{color:#46647a}
+.bar-track{border-left-color:#9bb5c9;background-image:linear-gradient(to right,transparent calc(100% - 1px),#b7ccdc99 0)}
+.empty .date-label,.empty .day-total{color:#738b9f}
+.subject-breakdown{border-top-color:#719ac280}
+.subject-list:not(:has(.empty-subjects)){background:#e7eff5;border:1px solid #b2cadd;border-radius:16px;padding:0 14px}
+.subject-row:last-child{border-bottom:0}
+.subject-row>svg{color:#57758d}
+.outline{background:#deebf4;border-color:#9bb9d1;color:#2d5273}
+.backup-section{border-top-color:#719ac280}
+.backup-section>p:not(.eyebrow),details,.privacy-note{color:#405f79}
+.backup-buttons .secondary{background:#eaf1f6}
+.add-first{background:#deebf4;border-color:#5f88aa}
